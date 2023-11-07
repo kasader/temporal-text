@@ -1,0 +1,24 @@
+
+============================================================
+    scasada1-zkelly1-nle1, 
+    (Sasha, Zach, Nathan)
+----------------------------------------
+Organization: 10
+Delivery: 10
+Content: 9
+Timing: 10 (14:00)
+Q/A: 10
+Notes:
+  - graphic design is nice, though it can be a bit distracting at times
+  - slide text sometimes a bit on the small side (e.g. sub-points on "Models"
+    slide)
+  - speech generally has good clarity and volume
+  - use of board was fine, though I'm not quite sure why the board content
+    wasn't just put on a slide?
+  - good explanation of hyperparameter search
+  - no explanation of experimental design for final results (e.g. hold-out?
+    k-fold?)
+  - nice display/explanation of high-importance features
+
+
+Overall: 49/50

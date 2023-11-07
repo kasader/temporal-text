@@ -1,0 +1,128 @@
+Overall: 86/100
+
+1. ( 5/5) Abstract: Does the abstract summarize the central question, methods,
+and conclusions of your work? Is the abstract concise?
+
+  - contains basically what it should and is a reasonable length, but the
+    formatting  (e.g. $MODEL_3$) makes it harder to interpret the results than
+    it should be 
+
+
+2. ( 12/15) Introduction: Does the paper introduce the key issues/central
+questions (the what), motivate the work (the why), and clearly outline the
+approach taken to address these questions (the how)?
+
+  - you touch on the relevant issues here, but don't really go into much depth;
+    spending more time in this section would better prepare your reader to
+    understand and contextualize the rest of your work
+
+  - additionally, this section needs some citations providing references the
+    reader can consult for more information (e.g. if I want to know more about
+    Historical Dating, what should I read?  If I want to know more about TF-IDF,
+    where do I go for that? etc.)
+
+  - Note: "TF-IDF" is an acronym of (i.e. is "short for") "Term Frequency-Inverse
+    Document Frequency", but the "Short For" is not part of the technique name!
+
+
+
+3. ( 24/25) Methodology: Is your algorithmic approach clearly described? Are the
+experiments clearly described (key parameter settings, data set, evaluation
+metrics) so that they can be replicated? Are figures/equations/pseudcode used
+where appropriate? Is the approach suitable/justified to address the main
+question? Is the paper appropriate for the target audience?
+
+  - the level of detail you have for your algorithms is ok, but again you 
+    need to provide the reader a place to go for more detail; e.g. "for more
+    information about Naive Bayes, see [citation]".  You should have this for
+    each thing that you give an overview of but don't explain in full and
+    complete detail (which for a paper like this is pretty much every technique
+    you mention, since you're not trying to describe a novel technique in enough
+    detail someone could replicate it)
+
+  - I'm not sure your tokenization example looks the way you want it to; the
+    text says "individual words on each newline", but in your paper they all
+    appear together on the same line with some extra stuff that doesn't look
+    relevant...
+
+
+14. ( 23/25) Results and Discussion: Are the results clearly presented and
+analyzed? Are graphs and tables used where appropriate?
+
+   - this section does not appear to contain anything beyond the placeholder
+     that came with the template (UPDATE: now grading from the `final`
+     branch...)
+
+   - you are tuning a hyperparameter (alpha) that has never previously been
+     mentioned in your paper, so the reader has no idea what it does 
+
+   - same for other hyperparameters, these things either went by different names
+     or weren't in your description of the methods at all, though for the
+     ensemble ones you at least explain them here
+
+   - you do a bunch of hyperparameter optimization, but you don't really do much
+     analysis (i.e. what hyperparameter values are best can tell you things, but
+     you didn't mention this or try to help us understand what we should
+     conclude from your results)
+
+   - the normalized confusion matricies are ok, but since you said you have
+     sample balance issues it might be better to use raw counts; that way, the
+     reader can actually tell from looking at the ConfMat
+
+   - also, you say things are imbalanced but never give us actual numbers so
+     when you talk about things like "not surprising given high class imbalance"
+     we don't actually know how surprising it should be
+
+   - text in the "Feature Importance" figures is tiny and unreadable; also I have
+     no idea what the color is supposed to indicate since the top and the bottom
+     are the same
+
+   - I'm not sure why it's surprising that AdaBoost has faster falloff; AdaBoost
+     is choosing features based on max MDI and only generates stumps, so only
+     high-MDI features tend to get used at all.  RF is generating deeper trees
+     (so more features get used), and because it's selecting features more
+     randomly, each tree is less aggressive at minimizing MDI at the top
+
+   - I suspect the reason you're seeing "poor" show up is that it used to be a
+     frequent word to describe the condition of something, e.g. "a coat of poor
+     quality", "feeling poorly", etc.; in modern usage it's typically only used
+     to describe a state of being without much money, which probably shows up a
+     lot less frequently in a corpus made of literature (if you used newspapers,
+     this might be different)
+
+   - overall I'd like to see even more in-depth analysis (as opposed to just
+     pointing out the literal meaning of the results), but what you've got here
+     is ok
+
+     
+      
+
+
+5. ( 12/15) Social Implications: Have key stakeholders been identified? Are the
+implications of this work on those stakeholders identified and analyzed? On the
+relationships between those stakeholders? Does the analysis consider multiple
+perspectives?
+
+  - this seems to leave out several important issues... for example, you focused
+    on English text in large part because there's a lot of data with easilly
+    researchable publication dates; what about languages with less easily
+    available data?  Does this create (or exacerbate) a power dynamic around
+    research involving low-resource languages?  
+
+
+6. ( 10/10) Is there a substantive conclusion? Are future directions for this
+work described?
+
+  - lots of future work here, so much the actual "conclusion" bit kind of gets
+    lost
+
+
+7. ( 0/5) Is there a bibliography provided with complete citations to relevant
+papers?
+
+  - no references other than one from the template (and which has nothing to do
+    with the topic of this paper)
+
+  - note that hyperlinks buried in the text don't count as citations/references
+    in most writing targeting paper as a medium (because if I print out
+    a physical copy, I should still be able to tell what your sources were)
